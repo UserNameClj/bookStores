@@ -1,6 +1,6 @@
 <template>
     <div class="conten-zoom">
-      {{msg}}
+         <router-view></router-view>
     </div>
 </template>
 
@@ -24,7 +24,6 @@ name:"ShoppingConten",
   flex: 1;
   margin: 2.5rem 0 3.125rem 0;
   height: calc(100vh - 2.5rem - 3.125rem);
-  background-color: yellow;
   overflow: auto;
 }
  

@@ -5,6 +5,7 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view />-->
+ 
     <shopping-header></shopping-header>
     <shopping-conten></shopping-conten>
     <shopping-footer></shopping-footer>
