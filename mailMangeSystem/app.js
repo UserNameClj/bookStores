@@ -14,6 +14,7 @@ var accept_log = function (log) {
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers","*")
     res.setHeader("Content-Type","text/palin;charset=utf-8");
     next();
 })
@@ -24,7 +25,7 @@ app.use((req,res,next)=>{
 //打印日志
 app.use((time,req,res,next)=>{
     if(req.url !== "/favicon.ico"){
-         accept_log(`${time}:${req.host}${req.url}---${req.method}\r\n`)
+         accept_log(`${time}:${req.hostname}${req.url}---${req.method}\r\n`)
     }
     next()
 })

@@ -1,11 +1,13 @@
 import Vue from "vue";
+import store from './store'
 import App from "./App.vue";
 import router from "./router";
 import Vant from 'vant';
 import '../public/vant.css';
 import Axios from "axios";
 Vue.use(Vant);
-// Vue.use(Axios,AxiosVue)
+
+
 Vue.prototype.$http=Axios
 Vue.directive('test',{
   bind(el){
@@ -36,5 +38,6 @@ Vue.directive('focus',{
 new Vue({
   router,
   Axios,
+  store,
   render: h => h(App)
 }).$mount("#app");

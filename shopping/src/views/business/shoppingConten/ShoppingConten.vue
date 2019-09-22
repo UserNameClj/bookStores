@@ -1,6 +1,8 @@
 <template>
     <div class="conten-zoom">
-         <router-view></router-view>
+      <keep-alive include="GoodsBar">
+        <router-view ></router-view>
+      </keep-alive>
     </div>
 </template>
 

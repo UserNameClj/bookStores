@@ -1,11 +1,5 @@
 <template>
-  <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />-->
- 
+  <div id="app"> 
     <shopping-header></shopping-header>
     <shopping-conten></shopping-conten>
     <shopping-footer></shopping-footer>
@@ -34,7 +28,18 @@ header,
 footer {
   box-sizing: border-box;
 }
-
+.float-left{
+  float: left;
+}
+.float-right{
+  float:right
+}
+.float-clear{
+  clear: both;
+}
+li{
+  list-style: none;
+}
 #app {
   display: flex;
 }

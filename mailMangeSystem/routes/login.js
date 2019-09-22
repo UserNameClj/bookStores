@@ -23,30 +23,34 @@ router.all((req,res,next)=>{
     var time = new Date()
     next(time)
 })
-
-
-
-
-router.post('/', jsonParser, (req, res,next) => {
+function checkUserInfo(req,res){
+    console.time('test')
     MongoClient.connect(url, {
         useNewUrlParser:true//用于解决警告问题
     },(err,db)=>{
         if(err) {
             console.log('数据库链接异常');
-            res.send('can no find database')
+            res.send(JSON.stringify({code:1,msg:err}));
             throw err
         };
         var dbo = db.db('shopping');
         dbo.collection('user').find(req.body).toArray((err,result)=>{
             if(err){
                 console.log('数据库异常');
-                res.send('database exception');
+                res.send(JSON.stringify({code:1,msg:err}));
                 throw err;
             }
             console.log('数据请求成功');
-            res.send(result);
+            res.send(JSON.stringify({code:0,data:result,XToken:'10086'}));
             db.close()
         })
     })
+    console.timeEnd('test')
+}
+
+
+
+router.post('/', jsonParser, (req, res,next) => {
+    checkUserInfo(req,res)
 })
 module.exports = router
