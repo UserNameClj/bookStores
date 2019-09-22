@@ -26,12 +26,13 @@
         size="large"
         :disabled="isForbidLogin"
         @click="loginUser()"
-      >{{loginBtn}}</van-button>
+        >{{ loginBtn }}</van-button
+      >
     </div>
     <div class="find-user-box">
       <van-row>
-        <van-col span="12">{{registUser}}</van-col>
-        <van-col span="12">{{forgetPassword}}</van-col>
+        <van-col span="12">{{ registUser }}</van-col>
+        <van-col span="12">{{ forgetPassword }}</van-col>
       </van-row>
     </div>
   </div>
@@ -39,7 +40,6 @@
 
 <script>
 import Axios from "axios";
-import qs from "qs";
 
 export default {
   name: "Login",
@@ -52,13 +52,16 @@ export default {
       isFocus: true,
       registUser: "注册用户",
       forgetPassword: "忘记密码",
-      usernameError:"用户或密码有误"
+      usernameError: "用户或密码有误"
     };
   },
   components: {},
   methods: {
     _loginUser() {
-      Axios.post("http://localhost:3000/login", { user: this.username,paasword:this.paasword }).then(
+      Axios.post("http://localhost:3000/login", {
+        user: this.username,
+        paasword: this.paasword
+      }).then(
         res => {
           var data = res.data;
           if (data.data[0]) {
@@ -67,7 +70,7 @@ export default {
             this.$toast({
               message: this.usernameError
             });
-            this.paasword = '';
+            this.paasword = "";
           }
         },
         error => {
@@ -106,4 +109,3 @@ export default {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 </style>
-

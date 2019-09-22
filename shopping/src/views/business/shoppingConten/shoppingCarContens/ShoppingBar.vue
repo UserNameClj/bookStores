@@ -1,24 +1,19 @@
 <template>
- <div>
-     {{msg}}
- </div>
+  <div>
+    {{ msg }}
+  </div>
 </template>
 
 <script>
- export default {
-name:"ShoppingCarBar",
-   data () {
-     return {
-         msg:'购物车'
-     }
-   },
-   components: {
-
-   }
- }
+export default {
+  name: "ShoppingCarBar",
+  data() {
+    return {
+      msg: "购物车"
+    };
+  },
+  components: {}
+};
 </script>
 
-<style scoped>
-
- 
-</style>
+<style scoped></style>

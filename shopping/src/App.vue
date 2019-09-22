@@ -1,5 +1,5 @@
 <template>
-  <div id="app"> 
+  <div id="app">
     <shopping-header></shopping-header>
     <shopping-conten></shopping-conten>
     <shopping-footer></shopping-footer>
@@ -22,22 +22,23 @@ export default {
 body {
   padding: 0px;
   margin: 0px;
+  overflow: hidden;
 }
 div,
 header,
 footer {
   box-sizing: border-box;
 }
-.float-left{
+.float-left {
   float: left;
 }
-.float-right{
-  float:right
+.float-right {
+  float: right;
 }
-.float-clear{
+.float-clear {
   clear: both;
 }
-li{
+li {
   list-style: none;
 }
 #app {

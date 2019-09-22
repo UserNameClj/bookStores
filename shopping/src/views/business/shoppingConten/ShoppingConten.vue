@@ -1,23 +1,21 @@
 <template>
-    <div class="conten-zoom">
-      <keep-alive include="GoodsBar">
-        <router-view ></router-view>
-      </keep-alive>
-    </div>
+  <div class="conten-zoom">
+    <keep-alive include="GoodsBar">
+      <router-view></router-view>
+    </keep-alive>
+  </div>
 </template>
 
 <script>
- export default {
-name:"ShoppingConten",
-   data () {
-     return {
-       msg:'商城内容'
-     }
-   },
-   components: {
-
-   }
- }
+export default {
+  name: "ShoppingConten",
+  data() {
+    return {
+      msg: "商城内容"
+    };
+  },
+  components: {}
+};
 </script>
 
 <style scoped>
@@ -28,5 +26,4 @@ name:"ShoppingConten",
   height: calc(100vh - 2.5rem - 3.125rem);
   overflow: auto;
 }
- 
 </style>

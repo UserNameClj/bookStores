@@ -5,23 +5,22 @@
 </template>
 <script>
 export default {
-  name:'about',
-  data(){
+  name: "about",
+  data() {
     return {
-      test : 'test'
-    }
+      test: "test"
+    };
   },
   methods: {},
   mounted() {
-    console.log(11)
+    console.log(11);
   }
-}
+};
 </script>
 <style scoped>
-.about{
+.about {
   height: 1rem;
   width: 15rem;
   background-color: red;
 }
 </style>
-

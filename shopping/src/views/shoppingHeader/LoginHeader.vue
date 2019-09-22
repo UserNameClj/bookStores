@@ -3,7 +3,7 @@
     <div class="back-call arrow-left float-left">
       <van-icon name="arrow-left" />
     </div>
-    <div class="app-title">{{title}}</div>
+    <div class="app-title">{{ title }}</div>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
       title: "monkey商城"
     };
   },
-  components: {},
+  components: {}
 };
 </script>
 

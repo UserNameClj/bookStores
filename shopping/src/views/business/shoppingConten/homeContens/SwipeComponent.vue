@@ -2,14 +2,14 @@
   <div>
     <van-swipe :autoplay="1500" class="swiper">
       <van-swipe-item v-for="(image, index) in images" :key="index">
-        <img :src="image" @click="Preview_img(images,index)" />
+        <img :src="image" @click="Preview_img(images, index)" />
       </van-swipe-item>
     </van-swipe>
   </div>
 </template>
 
 <script>
-import {ImagePreview} from 'vant';
+import { ImagePreview } from "vant";
 export default {
   name: "SwipeGoods",
   data() {
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-.swiper img{
-    width: 95vw;
+.swiper img {
+  width: 95vw;
 }
 </style>

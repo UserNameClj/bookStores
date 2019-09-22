@@ -3,8 +3,19 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 const store = new Vuex.Store({
-    state: {
-        count:'wu'
+  state: {
+    count: "wu",
+    isShowSearchTool: true
+  },
+  mutations: {
+    setCurrentBar(state, isShow) {
+      state.isShowSearchTool = isShow;
     }
-})
-export default store
+  },
+  actions: {
+    getShowHeader(context, isShow) {
+      context.commit("setCurrentBar", isShow);
+    }
+  }
+});
+export default store;

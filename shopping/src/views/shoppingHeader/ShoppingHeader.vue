@@ -1,35 +1,31 @@
 <template>
   <div class="top-tool-bar">
-    <login-header></login-header>
-    <search-header></search-header>
+    <login-header v-if="this.$store.state.isShowSearchTool"></login-header>
+    <search-header v-else></search-header>
   </div>
 </template>
 
 <script>
 import LoginHeader from "./LoginHeader";
-import SearchHeader from "./SearchHeader"
+import SearchHeader from "./SearchHeader";
 export default {
   name: "ShoppingHeader",
   data() {
     return {
-      msg: "商城头部",
-     
+      msg: "商城头部"
     };
   },
   components: {
     LoginHeader,
     SearchHeader
   },
-  methods: {
-
-  },
+  methods: {},
   computed: {
-    currenRoute(){
-      console.log(this.$router.path)
-      return 100
+    currenRoute() {
+      console.log(this.$router.path);
+      return 100;
     }
-  },
-
+  }
 };
 </script>
 

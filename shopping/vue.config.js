@@ -5,6 +5,6 @@ module.export = {
     https: false,
     open: true
   },
-  outputDir: "console",
+  outputDir: "shopDist",
   lintOnSave: false
 };
